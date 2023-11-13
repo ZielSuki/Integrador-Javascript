@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "akira";
+  src: url(/fonts/Akira\ Expanded\ Demo.otf);
+}
+
+:root {
+  --bg-one: #84b6f4;
+  --bg-darker: #050505;
+  --bg-dark: #1d1c1a;
+  --bg-two: #faf8f6;
+  --bg-three: #e5e5e5;
+
+  /* Textos */
+  --text-light: #faf8f6;
+  --text-dark: #1d1c1a;
+  --text-logo: #03329b;
+
+  --bg-logo-one: #ffac00;
+  --bg-logo-two: #ffc200;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #e5f5e5;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .menuspan {
+    margin-left: 1.5rem;
+    color: var(--text-light);
+    display: flex;
+  }
+
+  .navlinks {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: var(--bg-logo-two);
+    color: var(--bg-darker);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(200%);
+    transition: all ease-in-out 0.5s;
+  }
+
+  .navlinks li a {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--bg-darker);
+  }
+
+  .toggle-menu {
+    transition: all ease-in-out 0.5s;
+    transform: translate(0%);
+  }
+}

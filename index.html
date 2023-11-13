@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta ch$et="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css">
+    <title>Todo Geek</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav>
+        <span class="material-symbols-outlined menuspan" onclick="toggleMenu()">
+          menu
+        </span>
+        <ul class="navlinks">
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#products">Productos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+
+        <!-- CART -->
+        <span class="material-symbols-outlined cartspan" onclick="toggleCart()">
+          shopping_cart
+        </span>
+
+        <div class="cart">
+          <h3>Tu carrito:</h3>
+          <div class="cart-products-spreadsheet"></div>
+            
+          <p class="cart-total">El total de la compra es: </p>
+          <div class="cart-pay-delete">
+            <button class="material-symbols-outlined pay" onclick="completePayCart()">payments</button>
+            <button class="material-symbols-outlined delete" onclick="deleteAllCart()">delete</button>
+          </div>
+        </div>
+        <!-- CART -->
+
+        <div class="overlay"></div>
+      </nav>
+      <div class="logo-header">
+        <a href="#top">
+          <img src="./img/D20V4.png" alt="logo" />
+        </a>
+      </div>
+    </header>
+    <!-- HEADER -->
+
+    <main>
+      <!-- HERO -->
+      <section id="hero">
+        <div class="hero-info">
+          <h1>Encontrá lo que necesitás, nosotros lo vendemos.</h1>
+          <p>
+            Somos la tienda geek con el catalogo más grande del país. Ofrecemos
+            ofertas mensuales, productos originales y de calidad.
+          </p>
+        </div>
+        <img src="./img/LOGOV2.png" alt="d20v" />
+      </section>
+      <!-- HERO -->
+
+      <!-- PRODUCTS (se renderiza desde JS)-->
+      <section id="products">
+        <!--Categories-->
+        <div class="categories" onclick="category(event)">
+          <p>Categorías:</p>
+          <button class="category active-category" data-category="rubik">
+            Rubik
+          </button>
+          <button class="category" data-category="dados">Dados</button>
+          <button class="category" data-category="ttrpg">Juegos de Rol</button>
+          <button class="category" data-category="manga">Manga</button>
+          <button class="category" data-category="minis">Miniaturas</button>
+        </div>
+        <!--Categories-->
+
+        <!--Spreadsheet-->
+        <div class="products-spreadsheet"></div>
+        <div class="arrows">
+          <div class="arrow-left" onclick="previousIndex()">
+            <p>&#10094;</p>
+          </div>
+          <div class="arrow-right" onclick="nextIndex()">
+            <p>&#10095;</p>
+          </div>
+        </div>
+
+        <!--Spreadsheet-->
+      </section>
+      <!-- PRODUCTS (se renderiza desde JS)-->
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <div class="values">
+          <div class="cardvalues">
+            <!--Hacer una animacion cada vez q pasa el cursor por una card-->
+            <h3>Especialistas</h3>
+            <p>Una tienda online de geeks para geeks.</p>
+          </div>
+          <div class="cardvalues">
+            <h3>Variedad</h3>
+            <p>Ofrecemos un montón de productos!</p>
+          </div>
+          <div class="cardvalues">
+            <h3>Calidad</h3>
+            <p>Siempre la mayor calidad para nuestros clientes.</p>
+          </div>
+          <div class="cardvalues">
+            <h3>Ofertas</h3>
+            <p>Tenemos ofertas imperdibles todos los meses!</p>
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT -->
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Mandanos un mensaje:</h2>
+        <form class="contact-form" novalidate>
+          <div class="contact-form__field">
+            <input type="text" id="name" placeholder="Your name"  />
+            <small></small>
+          </div>
+
+          <div class="contact-form__field">
+            <input type="email" id="email" placeholder="Your email" />
+            <small></small>
+          </div>
+
+          <div class="contact-form__field">
+            <input type="text" id="phone" placeholder="Your phone number" />
+            <small></small>
+          </div>
+
+          <div class="contact-form__field">
+            <textarea rows="2" placeholder="Mensaje" id="message"></textarea>
+            <small></small>
+          </div>
+
+          <input type="submit" class="contact-form__submit" value="Enviar"></input>
+        </form>
+        <p>Telefono: +54 9 11-3456-7891</p>
+      </section>
+      <!-- CONTACT -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="links">
+        <a href="./pages/register.html" target="_blank">Register</a>
+        <img src="./img/LOGOV2.png" alt="altlogo" />
+        <a href="./pages/login.html" target="_blank">Login</a>
+      </div>
+    </footer>
+    <!-- FOOTER -->
+    <script src="./form.js"></script>
+    <script src="./data.js"></script>
+    <script src="./main.js"></script>
+    <script src="./mediaqueries.js"></script>
+  </body>
+</html>
