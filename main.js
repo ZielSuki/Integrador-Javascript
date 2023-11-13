@@ -11,15 +11,18 @@ const cartTotal = document.querySelector(".cart-total");
 
 let cartData = [];
 let cols = 0;
-let mediaQuery = window.matchMedia("(min-width: 2000px)");
+let mediaQuery2000px = window.matchMedia("(min-width: 2000px)");
+let mediaQuery768px = window.matchMedia("(max-width: 768px)");
 
 const createProductGrid = () => {
-  if (mediaQuery.matches) {
+  if (mediaQuery2000px.matches) {
     //si pantalla es mayor o igual a 2000px
     cols = Math.floor(2000 / 330); //se calcula la cantidad de cols del grid con 2000px
-  } else if (!mediaQuery.matches) {
+  } else if (!mediaQuery2000px.matches && !mediaQuery768px.matches) {
     //si no
     cols = Math.floor(document.body.clientWidth / 330); //se calcula según el width de la pantalla
+  } else if (mediaQuery768px.matches) {
+    cols = 4;
   }
   productsSpreadsheet.style.setProperty("--columns", cols);
 };

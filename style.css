@@ -36,14 +36,7 @@ html {
 }
 
 body {
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #e5f5e5;
-  color: var(--text-dark);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  contain: paint;
 }
 
 main {
@@ -131,7 +124,7 @@ nav {
   height: calc(100vh - 70px);
   overflow-y: scroll;
   z-index: 2;
-  width: 350px;
+  width: 320px;
   transform: translate(200%);
   transition: all 0.5s ease;
 }
@@ -249,7 +242,6 @@ nav {
   height: 100vh;
   width: 100%;
   z-index: 1;
-  /*Efecto de Glassmorphismo*/
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(5px);
@@ -257,8 +249,6 @@ nav {
   display: none;
 }
 
-/*Toggle para el overlay (para que funcione unicamente cuando abrimos carrito o menu hamburguesa.
-  Aclarar que funciona porque son elementos hermanos y overlay esta debajo de los dos inputs en el código.*/
 .show-overlay {
   display: block;
 }
@@ -325,19 +315,6 @@ nav {
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-}
-
-@media (min-width: 2000px) {
-  .categories {
-    position: relative;
-    width: calc(2000px - 50px);
-    left: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 10px;
-  }
 }
 
 .categories p {
@@ -451,6 +428,7 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  margin-bottom: 30px;
 }
 
 .arrow-right {
@@ -514,7 +492,6 @@ nav {
 /*ABOUT SECTION*/
 #about {
   background-color: var(--bg-dark);
-  height: 450px;
   width: 100%;
   gap: 0.6rem;
   display: flex;
