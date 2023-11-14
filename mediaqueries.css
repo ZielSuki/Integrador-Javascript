@@ -138,24 +138,12 @@
   .cardvalues {
     width: 250px;
   }
+  .messagecart {
+    height: auto;
+  }
 }
 
 @media (max-width: 320px) {
-  /*.contact-form {
-    justify-content: space-between;
-    height: 600px;
-  }
-  .contact-form__field {
-    width: 95%;
-    min-width: 0;
-  }
-  #name {
-    margin-top: 20px;
-  }
-  .contact-form__submit {
-    margin-bottom: 20px;
-  }*/
-
   .contact-form {
     width: 100%;
     background-color: var(--bg-three);
@@ -174,5 +162,11 @@
   }
   #contact h2 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 256px) {
+  .product-card {
+    min-width: 0;
   }
 }
