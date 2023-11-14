@@ -90,7 +90,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translate(200%);
+    transform: translate(-200%);
     transition: all ease-in-out 0.5s;
   }
 
@@ -111,9 +111,16 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(var(--columns), 1fr);
   }
+  .contact-form__submit {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 530px) {
+  .contact-form__field {
+    width: 95%;
+    min-width: 0;
+  }
   .categories {
     left: 0;
     flex-direction: column;
@@ -131,14 +138,41 @@
   .cardvalues {
     width: 250px;
   }
-
-  .contact-form {
-    width: 250px;
-  }
 }
 
 @media (max-width: 320px) {
+  /*.contact-form {
+    justify-content: space-between;
+    height: 600px;
+  }
+  .contact-form__field {
+    width: 95%;
+    min-width: 0;
+  }
+  #name {
+    margin-top: 20px;
+  }
+  .contact-form__submit {
+    margin-bottom: 20px;
+  }*/
+
   .contact-form {
-    width: 250px;
+    width: 100%;
+    background-color: var(--bg-three);
+  }
+
+  .contact-form__field {
+    width: 99%;
+  }
+
+  .cart {
+    width: var(--screenwidth);
+  }
+
+  #about h2 {
+    font-size: 1.5rem;
+  }
+  #contact h2 {
+    font-size: 1rem;
   }
 }

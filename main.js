@@ -9,10 +9,20 @@ const cart = document.querySelector(".cart");
 const menu = document.querySelector(".navlinks");
 const cartTotal = document.querySelector(".cart-total");
 
+let screenWidth = "";
 let cartData = [];
 let cols = 0;
 let mediaQuery2000px = window.matchMedia("(min-width: 2000px)");
 let mediaQuery768px = window.matchMedia("(max-width: 768px)");
+let mediaQuery320px = window.matchMedia("(max-width: 320px)");
+
+function widthChangeCallback(mediaQuery320px) {
+  if (mediaQuery320px.matches) {
+    screenWidth = document.body.clientWidth + "px";
+    console.log(screenWidth);
+  }
+  cart.style.setProperty("--screenwidth", screenWidth);
+}
 
 const createProductGrid = () => {
   if (mediaQuery2000px.matches) {
@@ -226,6 +236,8 @@ const init = () => {
   overlay.addEventListener("click", closeOnClick);
   menu.addEventListener("click", closeMenu);
   window.addEventListener("DOMContentLoaded", renderCartProducts(cartData));
+  mediaQuery320px.addEventListener("change", widthChangeCallback);
+  widthChangeCallback(mediaQuery320px);
 };
 
 init();

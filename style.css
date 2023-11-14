@@ -545,8 +545,8 @@ nav {
 /*CONTACT SECTION*/
 
 #contact {
+  margin-bottom: 50px;
   width: 100%;
-  height: 450px;
   background-color: var(--bg-dark);
   display: flex;
   flex-direction: column;
@@ -556,11 +556,11 @@ nav {
 }
 
 .contact-form {
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 500px;
+  justify-content: space-around;
   width: 50%;
   max-width: 500px;
   border-radius: 10px;
@@ -587,6 +587,7 @@ nav {
   height: 68px;
   width: 50%;
   min-width: 150px;
+  margin-bottom: 1rem;
   color: var(--bg-dark);
 }
 
@@ -600,13 +601,12 @@ nav {
 }
 
 .contact-form__field small {
-  white-space: nowrap;
+  white-space: wrap;
   font-weight: 500;
   color: firebrick;
 }
 
 .contact-form__submit {
-  margin-top: 30px;
   width: 20%;
   height: 2rem;
   font-size: 1rem;
