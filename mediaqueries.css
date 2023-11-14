@@ -176,12 +176,13 @@
     height: 50px;
   }
   .cart-info {
+    width: 50%;
     align-items: flex-start;
     margin-right: 0;
     margin-left: 10px;
   }
   .cart-info p {
-    width: 90%;
+    width: 100%;
     text-align: left;
   }
 }
