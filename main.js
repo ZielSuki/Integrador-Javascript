@@ -252,6 +252,7 @@ const toggleCart = () => {
 
 const toggleMenu = () => {
   menu.classList.toggle("toggle-menu");
+  closeOnClick();
 };
 
 const init = () => {

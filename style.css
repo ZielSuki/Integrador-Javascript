@@ -145,7 +145,7 @@ nav {
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   border-bottom: 2px solid black;
 }
@@ -153,6 +153,7 @@ nav {
 .cart-info {
   margin-right: 10px;
   margin-bottom: 5px;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

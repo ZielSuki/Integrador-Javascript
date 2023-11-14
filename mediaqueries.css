@@ -81,7 +81,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 3;
     background-color: var(--bg-logo-two);
     color: var(--bg-darker);
     width: 100vw;
@@ -168,5 +168,20 @@
 @media (max-width: 256px) {
   .product-card {
     min-width: 0;
+  }
+  .container {
+    justify-content: flex-start;
+  }
+  .container img {
+    height: 50px;
+  }
+  .cart-info {
+    align-items: flex-start;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  .cart-info p {
+    width: 90%;
+    text-align: left;
   }
 }
