@@ -54,6 +54,7 @@ const category = (e) => {
     }
     e.target.classList.add("active-category");
     appState.activeCategory = e.target.dataset.category;
+    console.log(appState.activeCategory);
     appState.currentProductsIndex = 0;
     renderProducts(filterProducts());
   }
